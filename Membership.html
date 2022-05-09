@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta
+      name="generator"
+      content="HTML Tidy for HTML5 for Linux version 5.6.0"
+    />
+    <meta charset="utf-8" />
+    <title>Membership Form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free Website Template" name="keywords" />
+    <meta content="Free Website Template" name="description" />
+    <link href="img/favicon.ico" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="style.css" rel="stylesheet" />
+    <script>
+      function doClear() {
+        document.MembershipForm.name.value = "";
+        document.MembershipForm.address.value = "";
+        document.MembershipForm.city.value = "";
+        document.MembershipForm.state.value = "";
+        document.MembershipForm.zip.value = "";
+        document.MembershipForm.phone.value = "";
+        document.MembershipForm.email.value = "";
+
+        document.MembershipForm.time[0].checked = false;
+        document.MembershipForm.time[1].checked = false;
+        document.MembershipForm.time[2].checked = false;
+        document.MembershipForm.time[3].checked = false;
+        document.MembershipForm.time[4].checked = false;
+        document.MembershipForm.time[5].checked = false;
+        document.MembershipForm.price[0].checked = false;
+        document.MembershipForm.price[1].checked = false;
+        document.MembershipForm.price[2].checked = false;
+        document.MembershipForm.price[3].checked = false;
+        document.MembershipForm.price[4].checked = false;
+        document.MembershipForm.price[5].checked = false;
+        return;
+      }
+
+      function doSubmit() {
+        if (validateText() == false) {
+          alert("Required data missing from User");
+          return;
+        }
+        if (validateRadio() == false) {
+          alert("Required data missing!!");
+          return;
+        }
+        alert("Your Membership has been submitted.");
+        return;
+      }
+
+      function validateText() {
+        var name = document.MembershipForm.name.value;
+        if (name.length == 0) return false;
+        var address = document.MembershipForm.address.value;
+        if (address.length == 0) return false;
+        var city = document.MembershipForm.city.value;
+        if (city.length == 0) return false;
+        var phone = document.MembershipForm.phone.value;
+        if (phone.length == 0) return false;
+        return true;
+      }
+
+      function validateRadio() {
+        if (document.MembershipForm.time[0].checked) return true;
+        if (document.MembershipForm.time[1].checked) return true;
+        if (document.MembershipForm.time[2].checked) return true;
+        if (document.MembershipForm.time[3].checked) return true;
+        if (document.MembershipForm.time[4].checked) return true;
+        if (document.MembershipForm.time[5].checked) return true;
+        if (document.MembershipForm.price[0].checked) return true;
+        if (document.MembershipForm.price[1].checked) return true;
+        if (document.MembershipForm.price[2].checked) return true;
+        if (document.MembershipForm.price[3].checked) return true;
+        if (document.MembershipForm.price[4].checked) return true;
+        if (document.MembershipForm.price[5].checked) return true;
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="col-md-4 top-bar-right social">
+      <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a>
+    </div>
+    <!-- Top Bar End -->
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark container-fluid">
+      <a href="index.html" class="navbar-brand">Power Factory</a>
+      <div
+        class="collapse navbar-collapse justify-content-between navbar-nav ml-auto"
+        id="navbarCollapse"
+      >
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="Membership.html" class="nav-item nav-link">Membership</a>
+        <a href="Meditation.html" class="nav-item nav-link">Meditation</a>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form name="MembershipForm">
+      <h1>PowerHouse Membership Form</h1>
+      <br />
+      <p>
+        Thank you for joining the gym family! I hope our services are up to your
+        standards and if you request a refund, let us know.
+      </p>
+      <br />
+      <p>
+        Name: <input name="name" size="50" type="text" /><br />
+        Address: <input name="address" size="50" type="text" /><br />
+        City: <input name="city" size="15" type="text" /> State:
+        <input name="state" size="2" type="text" /> Zip:
+        <input name="zip" size="5" type="text" /><br />
+        Phone: <input name="phone" size="50" type="text" /><br />
+        Email: <input name="email" size="50" type="text" />
+      </p>
+      <h3>How long you are going to be on the membership?</h3>
+      <p>
+        <input name="time" type="radio" /> 1 week<br />
+        <input name="time" type="radio" /> 1 month<br />
+        <input name="time" type="radio" /> 3 months<br />
+        <input name="time" type="radio" /> 5 months<br />
+        <input name="time" type="radio" /> 10 months<br />
+        <input name="time" type="radio" /> 1 year<br />
+      </p>
+      <h3>Price for Membership</h3>
+      <p>
+        <input name="price" type="radio" /> Free for 1 week<br />
+        <input name="price" type="radio" /> $0.99 for 1 month<br />
+        <input name="price" type="radio" /> $4.99 for 3 months<br />
+        <input name="price" type="radio" /> $6.99 for 5 months<br />
+        <input name="price" type="radio" /> $9.99 for 10 months<br />
+        <input name="price" type="radio" /> $19.99 for 1 year<br />
+      </p>
+      <div class="elem-group">
+        <label for="message">Any Information we need know beforehand?</label
+        ><br />
+        <textarea
+          id="message"
+          name="visitor_message"
+          placeholder="Tell us anything else that might be important."
+          required=""
+        ></textarea>
+      </div>
+      <input type="button" value="Submit Form" onclick="doSubmit()" />
+    </form>
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+      <div class="container-fluid">
+        <div class="container footer-info">
+          <a href="index.html" class="footer-logo">Power Factory</a>
+          <h3>123 Street, New York, USA</h3>
+          <div class="footer-menu">
+            <p>+012 345 67890</p>
+            <p>info@example.com</p>
+            <p>Mon-Sat: 5AM-11PM</p>
+          </div>
+          <div class="footer-social">
+            <a href=""></a> <a href=""></a> <a href=""></a> <a href=""></a>
+            <a href=""></a>
+          </div>
+        </div>
+        <div class="container copyright row col-md-6">
+          <p>� <a href="#">Power Factory</a>, All Right Reserved.</p>
+        </div>
+      </div>
+      <!-- Footer End -->
+    </div>
+  </body>
+</html>
